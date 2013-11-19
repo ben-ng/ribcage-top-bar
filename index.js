@@ -9,7 +9,7 @@ var TopBar = Base.extend({
       '<div class="left-button-target"></div>'+
       '<div class="title hidden"></div>'+
       '<div class="menu-target"></div>'+
-      '<div class="right button-target"></div>'
+      '<div class="right-button-target"></div>'
   }
 
 , className: 'top-bar'
