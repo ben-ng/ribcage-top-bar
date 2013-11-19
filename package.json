@@ -1,0 +1,33 @@
+{
+  "name": "ribcage-top-bar",
+  "version": "0.0.0",
+  "description": "A fixed top bar for your app. Use in modals or as a direct child of the body element.",
+  "main": "index.js",
+  "style": "style.css",
+  "scripts": {
+    "test": "atomify test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Techwraith/ribcage-top-bar.git"
+  },
+  "keywords": [
+    "atomify",
+    "ribcage-view",
+    "ribcage",
+    "fix",
+    "nav",
+    "top",
+    "bar",
+    "menu"
+  ],
+  "author": "techwraith",
+  "license": "MIT",
+  "gitHead": "fdfeeb02517fff4a82f22c061dd41291e701a535",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "ribcage-view": "~0.0.11",
+    "ribcage-button": "~0.0.1",
+    "ribcage-menu": "~0.0.1"
+  }
+}
