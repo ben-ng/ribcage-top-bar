@@ -19,8 +19,8 @@ var TopBar = Base.extend({
     var opts = this.options
 
     if (opts.left) this.setLeftButton(opts.left)
-    if (opts.title) this.setTitle(opts.title)
-    if (opts.menu) this.setMenu(opts.menu)
+    if (opts.title) this.setTitle(opts.title, {show: true})
+    if (opts.menu) this.setMenu(opts.menu, {show: true})
     if (opts.right) this.setRightButton(opts.right)
 
   }
@@ -59,17 +59,39 @@ var TopBar = Base.extend({
 
   }
 
-, setMenu: function (opts) {
+, setMenu: function (opts, params) {
+
+    if (!params) params = {}
 
     if (this.menu) this.menu.close()
 
     this.menu = new Menu(opts)
     this.appendSubview(this.menu, this.$('.menu-target'))
 
+    if (params.show) this.showMenu()
+
   }
 
-, setTitle: function (title) {
+, hideMenu: function () {
+    this.$('.menu-target').hide()
+  }
+
+, showMenu: function () {
+    this.$('.menu-target').show()
+  }
+
+, setTitle: function (title, params) {
+    if (!params) params = {}
     this.$('.title').html(title)
+    if (params.show) this.showTitle()
+  }
+
+, hideTitle: function () {
+    this.$('.title').hide()
+  }
+
+, showTitle: function () {
+    this.$('.title').show()
   }
 
 , activateMenuItem: function (route) {
@@ -82,5 +104,3 @@ var TopBar = Base.extend({
 })
 
 module.exports = TopBar
-
-window.TopBar = TopBar
