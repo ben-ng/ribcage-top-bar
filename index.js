@@ -72,9 +72,10 @@ var TopBar = Base.extend({
     this.$('.title').html(title)
   }
 
-, activateMenuItem: function (label) {
+, activateMenuItem: function (route) {
+    this.menu.$('.active').removeClass('active')
     this.menu.eachSubview(function (view) {
-      if (view.label == label) view.$el.addClass('active')
+      if (view.options.route == route) view.$el.addClass('active')
     })
   }
 

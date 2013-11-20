@@ -1,1 +1,70 @@
-.top-bar { background: #000;}
+.top-bar {
+  min-height: 60px;
+  background: #363636;
+  box-sizing: border-box;
+}
+
+.top-bar > div {
+  float: left;
+  padding: 10px;
+}
+
+.top-bar .hidden {
+  display: none;
+}
+
+.top-bar .menu-bar {
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin-top: 2px;
+  max-width: 170px;
+}
+
+.top-bar .menu-bar .btn-bar {
+  display: table-cell;
+  text-align: center;
+  border-left: 1px solid #000;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  width: 1%;
+}
+
+.top-bar .menu-bar .btn-bar:first-child {
+  border-left: none;
+}
+
+.top-bar .menu-bar .btn-bar i {
+  color: #7e7d80;
+}
+
+.top-bar .menu-bar .btn-bar.active i {
+  color: #ffb200;
+}
+
+.top-bar .left-button-target {
+  min-width: 60px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.top-bar .left-button-target i {
+  margin-left: 12px;
+  font-size: 21px;
+}
+
+.top-bar .right-button-target {
+  float: none;
+  text-align: right;
+}
+
+.top-bar .right-button-target button,
+.top-bar .left-button-target button {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.top-bar .right-button-target button i,
+.top-bar .left-button-target button i {
+  color: #bababa;
+}
