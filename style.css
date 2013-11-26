@@ -27,6 +27,7 @@
   padding-top: 10px;
   padding-bottom: 8px;
   width: 1%;
+  cursor: pointer;
 }
 
 .top-bar .menu-bar .btn-bar:first-child {
@@ -34,11 +35,16 @@
 }
 
 .top-bar .menu-bar .btn-bar i {
-  color: #7e7d80;
+  color: #4f4f4f;
 }
 
-.top-bar .menu-bar .btn-bar.active i {
-  color: #ffb200;
+.top-bar .menu-bar .btn-bar.active i,
+.top-bar .menu-bar .btn-bar.active span {
+  color: #fbb116;
+}
+
+.top-bar .menu-bar .btn-bar span {
+  display: none;
 }
 
 .top-bar .left-button-target {
@@ -48,7 +54,6 @@
 }
 
 .top-bar .left-button-target i {
-  margin-left: 12px;
   font-size: 21px;
 }
 
@@ -67,4 +72,22 @@
 .top-bar .right-button-target button i,
 .top-bar .left-button-target button i {
   color: #bababa;
+}
+
+@media (min-width: 768px) {
+  .top-bar .menu-bar {
+    max-width: 300px;
+  }
+  .top-bar .menu-bar .btn-bar:hover {
+    background: #4f4f4f;
+  }
+  .top-bar .menu-bar .btn-bar span {
+    display: inline;
+    background: none;
+    color: #4f4f4f;
+  }
+  .top-bar .menu-bar .btn-bar:hover span,
+  .top-bar .menu-bar .btn-bar:hover i {
+    color: #bababa;
+  }
 }

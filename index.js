@@ -53,6 +53,8 @@ var TopBar = Base.extend({
 
     if (this.rightButton) this.rightButton.close()
 
+    if (!btn) return
+
     this.rightButton = this.getButton(btn)
     this.rightButton.$el.addClass('right')
     this.appendSubview(this.rightButton, this.$('.right-button-target'))
