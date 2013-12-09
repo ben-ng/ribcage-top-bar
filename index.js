@@ -23,6 +23,11 @@ var TopBar = Base.extend({
     if (opts.menu) this.setMenu(opts.menu, {show: true})
     if (opts.right) this.setRightButton(opts.right)
 
+    this.eachSubview(function (subview) {
+      subview.render();
+      subview.delegateEvents();
+    });
+
   }
 
 , getButton: function (opts) {
