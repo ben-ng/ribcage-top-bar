@@ -47,7 +47,8 @@
   display: none;
 }
 
-.top-bar .left-button-target {
+.top-bar .left-button-target,
+.top-bar .right-button-target {
   min-width: 60px;
   padding: 10px 0;
   box-sizing: border-box;
@@ -58,8 +59,7 @@
 }
 
 .top-bar .right-button-target {
-  float: none;
-  text-align: right;
+  float: right;
 }
 
 .top-bar .right-button-target button,

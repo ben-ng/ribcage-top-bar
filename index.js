@@ -4,7 +4,11 @@ var Base = require('ribcage-view')
 
 var TopBar = Base.extend({
 
-  template: function () {
+  afterInit: function (opts) {
+    this.options = opts
+  }
+
+, template: function () {
     return ''+
       '<div class="left-button-target"></div>'+
       '<div class="title hidden"></div>'+
@@ -89,7 +93,12 @@ var TopBar = Base.extend({
 
 , setTitle: function (title, params) {
     if (!params) params = {}
-    this.$('.title').html(title)
+
+    if(typeof title == 'string')
+      this.$('.title').html(title)
+    else
+      this.appendSubview(title, this.$('.title'));
+
     if (params.show) this.showTitle()
   }
 
