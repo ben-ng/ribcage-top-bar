@@ -1,5 +1,4 @@
 var Base = require('ribcage-view')
-  , BackButton = require('ribcage-back-button')
   , Button = require('ribcage-button')
   , Menu = require('ribcage-menu')
 
@@ -62,14 +61,7 @@ var TopBar = Base.extend({
       return opts
     }
 
-    var button;
-
-    if(opts.type == 'back')
-      button = new BackButton(opts);
-    else
-      button = new Button(opts);
-
-    return button;
+    return new Button(opts)
   }
 
 , setLeftButton: function (btn) {
