@@ -127,12 +127,17 @@ var TopBar = Base.extend({
       delete this.title
     }
 
-    if(!title) return
+    if(!title) {
+      this.$('.title').empty()
+      return
+    }
 
-    if(typeof title == 'string')
+    if(typeof title == 'string') {
       this.$('.title').html(title)
+    }
     else {
-      this.title = title;
+      this.$('.title').empty()
+      this.title = title
       this.appendSubview(title, this.$('.title'))
     }
 
