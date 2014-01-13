@@ -68,6 +68,7 @@ var TopBar = Base.extend({
 
     if (this.leftButton)  {
       this.detachSubview(this.leftButton)
+      this.leftButton.close()
       delete this.leftButton
     }
 
@@ -81,6 +82,7 @@ var TopBar = Base.extend({
 
     if (this.rightButton)  {
       this.detachSubview(this.rightButton)
+      this.rightButton.close()
       delete this.rightButton
     }
 
@@ -98,6 +100,7 @@ var TopBar = Base.extend({
 
     if (this.menu)  {
       this.detachSubview(this.menu)
+      this.menu.close()
       delete this.menu
     }
 
@@ -124,6 +127,7 @@ var TopBar = Base.extend({
 
     if(this.title) {
       this.detachSubview(this.title)
+      this.title.close()
       delete this.title
     }
 
