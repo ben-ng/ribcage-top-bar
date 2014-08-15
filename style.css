@@ -1,93 +1,95 @@
 .top-bar {
-  min-height: 60px;
-  background: #363636;
-  box-sizing: border-box;
-}
+    background: #363636;
 
-.top-bar > div {
-  float: left;
-  padding: 10px;
-}
-
-.top-bar .hidden {
-  display: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
 }
 
 .top-bar .menu-bar {
-  border: 1px solid #000;
-  border-radius: 3px;
-  margin-top: 2px;
-  max-width: 170px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    margin-top: 2px;
+    max-width: 170px;
+
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.top-bar .title {
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    flex: 1 1 auto;
+    line-height: 60px;
+    text-align: center;
 }
 
 .top-bar .menu-bar .btn-bar {
-  display: table-cell;
-  text-align: center;
-  border-left: 1px solid #000;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  width: 1%;
-  cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    border-left: 1px solid #000;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    width: 1%;
+    cursor: pointer;
 }
 
 .top-bar .menu-bar .btn-bar:first-child {
-  border-left: none;
+    border-left: none;
 }
 
 .top-bar .menu-bar .btn-bar i {
-  color: #4f4f4f;
+    color: #4f4f4f;
 }
 
 .top-bar .menu-bar .btn-bar.active i,
 .top-bar .menu-bar .btn-bar.active span {
-  color: #fbb116;
+    color: #fbb116;
 }
 
 .top-bar .menu-bar .btn-bar span {
-  display: none;
+    display: none;
 }
 
-.top-bar .left-button-target {
-  min-width: 60px;
-  padding: 10px 0;
-  box-sizing: border-box;
+.top-bar .left-button-target,
+.top-bar .right-button-target {
+    min-width: 80px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .top-bar .left-button-target i {
-  font-size: 21px;
-}
-
-.top-bar .right-button-target {
-  float: none;
-  text-align: right;
+    font-size: 21px;
 }
 
 .top-bar .right-button-target button,
 .top-bar .left-button-target button {
-  background: none;
-  border: none;
-  box-shadow: none;
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .top-bar .right-button-target button i,
 .top-bar .left-button-target button i {
-  color: #bababa;
+    color: #bababa;
 }
 
 @media (min-width: 768px) {
-  .top-bar .menu-bar {
-    max-width: 300px;
-  }
-  .top-bar .menu-bar .btn-bar:hover {
-    background: #4f4f4f;
-  }
-  .top-bar .menu-bar .btn-bar span {
-    display: inline;
-    background: none;
-    color: #4f4f4f;
-  }
-  .top-bar .menu-bar .btn-bar:hover span,
-  .top-bar .menu-bar .btn-bar:hover i {
-    color: #bababa;
-  }
+    .top-bar .menu-bar {
+        max-width: 300px;
+    }
+    .top-bar .menu-bar .btn-bar:hover {
+        background: #4f4f4f;
+    }
+    .top-bar .menu-bar .btn-bar span {
+        display: inline;
+        background: none;
+        color: #4f4f4f;
+    }
+    .top-bar .menu-bar .btn-bar:hover span,
+    .top-bar .menu-bar .btn-bar:hover i {
+        color: #bababa;
+    }
 }
